@@ -38,13 +38,13 @@ Based on MgT2E / 2022 Update
 
 ## System Overhauls
 
-| System                                  |
-| --------                                |
-| Character Creation                      |
-| Weapon Damage                           |
-| Computers                               |
-| Missiles                                |
-| Psionics                                |
+| System                                                                              |
+| --------                                                                            |
+| Character Creation                                                                  |
+| Weapon Damage                                                                       |
+| [Computers](https://github.com/johnny-b-goode/traveller/blob/main/doc/computers.md) |
+| [Missiles](https://github.com/johnny-b-goode/traveller/blob/main/doc/missiles.md)   |
+| [Psionics](](https://github.com/johnny-b-goode/traveller/blob/main/doc/psionics.md) |
 
 ## Conventions
 
