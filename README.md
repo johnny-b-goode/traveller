@@ -111,4 +111,5 @@ Numerous issues will be addressed in their own sections, or in a general section
 
 Test
 
-[test link]()
+[test link](https://github.com/johnny-b-goode/traveller#additional-stuff)
+[other test link](https://github.com/johnny-b-goode/traveller/blob/main/test.md)
