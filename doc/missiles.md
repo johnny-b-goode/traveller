@@ -27,15 +27,15 @@ Replace table at bottom of page with table indicated in Stat Changes.
 - Any missile fired at a spacecraft from within an atmosphere with a code greater than 4 is assumed to either be incapable of reaching the target or to have burned up before doing so.
 - Any missile fired from greater than Close range is automatically assumed to have failed, been outmaneuvered, run out of fuel, jammed, or destroyed. No EWar or Point Defense rolls are required.
 - Any point defence system or action (use ship TL for Gunners performing a Point Defence reaction) gains DM+1 per TL above 8, in addition to any other bonuses.
-- If a missile is fired within Close range it may survive long enough to strike the target. If the firing vessel does not have a position of advantage in a dog fight, then EWar may be performed normally, and point defence (automated or manual) may be performed with DM+2.
-- If the firing vessel does have a position of advantage in a dog fight, then EWar and point defence may both be performed normally.
+- If a missile is fired within Close range it may survive long enough to strike the target. If the firing vessel does not have a position of advantage in a dog fight, then EWar may be performed normally, and point defence (automated or manual) may be performed with an additional DM+2.
+- If the firing vessel does have a position of advantage in a dog fight, then EWar and point defence may both be performed normally. If the attacker won the last dogfight roll, point defence is performed with DM-2 for every 4 point difference in effect (an effect of 4 would be DM-2, 8 would be DM-4, etc.).
 
 ## Stat Changes
 
 ### High Guard
 
 | Weapon          | TL | Intercept | Power | Tons | Cost |
-| --------                                               |
+| --------        | -  | -         | -     | -    | -    |
 | Type I          | 10 | +1D       | 10    | 10   | Cr5M |
 | Type II         | 12 | +2D       | 10    | 10   | Cr6M |
 | Type III        | 14 | +3D       | 10    | 10   | Cr8M |
@@ -43,7 +43,7 @@ Replace table at bottom of page with table indicated in Stat Changes.
 ### Vehicle Handbook
 
 | Anti-Missile System | TL | Range | Damage | Spaces | Cost     | Magazine | Magazine Cost | Traits |
-| --------                                                                                          |
+| --------            |
 | Minigun             | 8  | 0.5   | 2D     | 3      | Cr200000 | 600      | Cr1000        | Auto 6 |
 | Laser               | 10 | 0.5   | 2D     | 4      | Cr250000 | -        | -             | Auto 3 |
 | Gauss               | 11 | 1     | 3D     | 3      | Cr350000 | 300      | Cr2000        | Auto 5 |
@@ -68,7 +68,7 @@ Many ship designs include Missile Racks. Missile Racks may be retained, but will
 The representation of missiles as being commonly used in high technology settings is illogical. In the present day, missiles are already challenged by anti-missile systems. Technological advancements and projects currently under way threaten to make missiles obsolete in coming decades. Projecting these trends and technologies into the future all but guarantees missiles would only be useful in a very narrow set of circumstances in those settings.
 
 ###  A Visual Explanation
-	https://youtu.be/FXy_DO6IZOA?t=56
+[https://youtu.be/FXy_DO6IZOA?t=56](https://youtu.be/FXy_DO6IZOA?t=56)
 
 ### Inability to Turn
 The law of conservation of momentem states that the momentum of a system is constant if no external forces are acting on the system. Further, the amount of energy required to change the trajectory of a projectile increases as the kinetic energy of the projectile increases.
