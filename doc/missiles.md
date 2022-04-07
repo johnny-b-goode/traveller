@@ -8,23 +8,24 @@ Changes to missiles to reflect a more likely future of the use of missiles in hi
 
 ### Core Rulebook Update 2022
 
-*Page 171, Point Defence (Gunner)*
+Page 171, Point Defence (Gunner)
 Remove the third sentence of the first paragraph. Change the fourth sentence to read:
 
-	_A gunner may attempt Point Defence on any number of missile salvos in a round, suffering a cumulative DM-1 for every attempt after the first (the second attempt would be DM-1, the third DM-2, etc.)._
+	*A gunner may attempt Point Defence on any number of missile salvos in a round, suffering a cumulative DM-1 for every attempt after the first (the second attempt would be DM-1, the third DM-2, etc.).*
 
 ### High Guard
 
-*Page 33, Point Defence Batteries*
+Page 33, Point Defence Batteries
 Replace table at bottom of page with table indicated in Stat Changes.
 	
 ### Vehicle Handbook
 
-*Page 49, Anti-Missile System*
+Page 49, Anti-Missile System
 Replace table at bottom of page with table indicated in Stat Changes.
 
 ## New Rules
 
+- Missiles use the original rules on worlds below TL 8.
 - Any missile fired at a moving spacecraft from within an atmosphere with a code greater than 4 is assumed to either be incapable of reaching the target or to have burned up before doing so.
 - Any missile fired from greater than Close range is automatically assumed to have failed, been outmaneuvered, run out of fuel, jammed, or destroyed. No EWar or Point Defense rolls are required.
 - Any point defence system or action (use ship TL for Gunners performing a Point Defence reaction) gains DM+1 per TL above 8, in addition to any other bonuses.
@@ -51,6 +52,10 @@ Replace table at bottom of page with table indicated in Stat Changes.
 | Advanced Laser      | 13 | 1     | 3D     | 2      | Cr450000 | -        | -             | Auto 3 |
 
 ## Description
+
+### Background
+
+Primitive missiles first become available as early as TL 2, and are certainly available (though hardly effective) by TL 3. Missiles are an effective weapons system by mid-TL 5, and a force multiplier by TL 6. Advances in technology will begin to mitigate the threat posed by missiles around mid-TL 7, and by TL 8 missiles are largely ineffective as a weapons system.
 
 ### Ramifications
 
@@ -83,7 +88,7 @@ Existing technologies mitigate this threat:
 - https://en.wikipedia.org/wiki/AN/SEQ-3_Laser_Weapon_System
 - https://www.af.mil/News/Article-Display/Article/1836495/air-force-research-laboratory-completes-successful-shoot-down-of-air-launched-m/
 
-The game even addresses this in some of the supplements:
+The game addresses already includes numerous point defence options at every scale, and in at least one case acknowledges the ineffectiveness of missiles given their existence:
 
 - High Guard, page 33, Point Defence Batteries
 - Vehicle Handbook, page 49, Anti-Missile System
