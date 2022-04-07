@@ -28,6 +28,10 @@ Based on MgT2E / 2022 Update
 | --------                                |
 | Ship Leasing                            |
 | Entrepeneur Career                      |
+| Natural Anagathics                      |
+| Gecko Variants                          |
+| Mobile Air Defence                      |
+| Custom Free Trader                      |
 
 ## Rule Changes
 
@@ -44,7 +48,7 @@ Based on MgT2E / 2022 Update
 | Weapon Damage                                                                       |
 | [Computers](https://github.com/johnny-b-goode/traveller/blob/main/doc/computers.md) |
 | [Missiles](https://github.com/johnny-b-goode/traveller/blob/main/doc/missiles.md)   |
-| [Psionics](](https://github.com/johnny-b-goode/traveller/blob/main/doc/psionics.md) |
+| [Psionics](https://github.com/johnny-b-goode/traveller/blob/main/doc/psionics.md)   |
 
 ## Conventions
 
