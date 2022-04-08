@@ -88,7 +88,7 @@ Existing technologies mitigate this threat:
 - https://en.wikipedia.org/wiki/AN/SEQ-3_Laser_Weapon_System
 - https://www.af.mil/News/Article-Display/Article/1836495/air-force-research-laboratory-completes-successful-shoot-down-of-air-launched-m/
 
-The game addresses already includes numerous point defence options at every scale, and in at least one case acknowledges the ineffectiveness of missiles given their existence:
+The game already includes numerous point defence options at every scale, and in at least one case acknowledges the ineffectiveness of missiles given their existence:
 
 - High Guard, page 33, Point Defence Batteries
 - Vehicle Handbook, page 49, Anti-Missile System
