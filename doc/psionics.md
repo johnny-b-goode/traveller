@@ -78,15 +78,19 @@ Core Rulebook, page 228
 Change the mechanic such that all humans have Psionic potential, it just tends to be latent and undeveloped.
 	This actually creates an interesting "conspiracy" story arc, in that the conspiracy is that the Imperium and The Zhodani both know this, and their societies are both based on the general population not being aware of this fact.
 
-Get rid of:
-	Send Thoughts
-	Assault
-	Flight
-	Pyrokinesis (maybe just tweak this instead)
-	Teleportation
+Remove:
+	- Send Thoughts
+	- Assault
+	- Flight
+	- Teleportation
 
-Change
-	Enhanced Strength - change to gain STR == 1/2 PSI
-	Enhanced Endurance
-	Fortitude
-	Regeneration
+Change (nerf)
+	- Enhanced Strength - change to gain STR == 1/2 PSI
+	- Enhanced Endurance
+	- Fortitude
+	- Regeneration
+	- Pyrokinesis -> Thermokinesis
+	- Teleportation - change to require psi greater than possible for an un-augmented human (I am thinking >= 30)
+
+Add
+	- Metaconcert
