@@ -24,14 +24,15 @@ Based on MgT2E / 2022 Update
 
 ## Additional Stuff
 
-| Addition                                |
-| --------                                |
-| Ship Leasing                            |
-| Entrepeneur Career                      |
-| Natural Anagathics                      |
-| Gecko Variants                          |
-| Mobile Air Defence                      |
-| Custom Free Trader                      |
+| Addition                                                                                |
+| --------                                                                                |
+| Ship Leasing                                                                            |
+| [Ship Shares](https://github.com/johnny-b-goode/traveller/blob/main/doc/ship_shares.md) |
+| Entrepeneur Career                                                                      |
+| Natural Anagathics                                                                      |
+| Gecko Variants                                                                          |
+| Mobile Air Defence                                                                      |
+| Custom Free Trader                                                                      |
 
 ## Rule Changes
 
@@ -118,3 +119,7 @@ Numerous issues will be addressed in their own sections, or in a general section
 Test
 
 [test link](https://github.com/johnny-b-goode/traveller#additional-stuff)
+
+![CC A-NC-SA 3.0](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
