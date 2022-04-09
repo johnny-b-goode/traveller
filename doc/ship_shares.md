@@ -7,7 +7,7 @@ According to the established rules:
 - Ship shares may, but do not have to*, be applied against a vessel owned, partially owned, or used by the players.
   - If not, ship shares generate Cr1000 of income per year for the owner of the share.
 
-* I believe this to be correct based on a few different things in the rules.
+\* I believe this to be correct based on a few different things in the rules.
 
 For a little more clarity on what ship shares are or represent, please consider that ship shares differ slightly from an ownership stake in that:
 - Ship shares function as an asset backed security, not a direct investment.
@@ -32,10 +32,12 @@ Ultimately, ship shares provide a mechanism for protecting accumulated wealth, b
 
 In keeping with the principles outlined elsewhere, the reason players cannot exchange ship shares for cash should be explained. I belive the following explanation works fairly well.
 - Ship shares are a special form of government subsidized investment.
-- As intersteller trade is so important for the overall economy governments want to ensure stability in the ownership, operation, and value of spacefaring vessels. An insured ownership program was created (similar to FDIC for deposit accounts)to  guarantee the preservation of ownership and encourage investment into spacefaring vessels.
+- As intersteller trade is so important for the overall economy governments want to ensure stability in the ownership, operation, and value of spacefaring vessels. An insured ownership program was created (similar to FDIC for deposit accounts) to guarantee the preservation of ownership and encourage investment into spacefaring vessels.
 - This program allows for an ownership stake in a vessel to be sold as a ship share, but once a ship share is created in this way the process cannot be reversed (this would have a real life analogue in a covenant or deed restriction).
+- Creation, sale, purchase, and trade of ship shares is executed exclusively on a government maintained (and regulated) market.
+- If the vessel represented by the ship share is destroyed, the value of the share is payed out (~ 1 MCr), however, this "payout" is immediately used to purchase a share in another ship. From the Traveller's perspective, it is as though they traded for a share in another (random) ship.
 - Ship shares are not permitted to be used for settling of debts, or used as collateral, currency, or portfolio assets except as noted below (bankruptcy proceedings, dissolutions, merger or acquisition).
-> NOTE: This does not prevent companies from owning or using ships, it simply prevents ship shares being used as a basis for hedge or investment funds. Most companies would prefer their assets to be more liquid anyway, so companies and corporations would have a strong preference for direct ownership of vessels.
+> NOTE: This does not prevent companies from owning or using ships, or ship shares. It simply prevents ship shares being used as a basis for hedge or investment funds. Most companies would prefer their assets to be more liquid anyway, so companies and corporations would have a strong preference for direct ownership of vessels.
 - Once created, ship shares can be traded, but cannot be sold except under certain conditions (similar to certain types of bonds, but without a maturation date):
   - Death of the owner if not held in trust or directly bequeathed
   - Bankruptcy proceedings
