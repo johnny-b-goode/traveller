@@ -2,25 +2,26 @@
 
 This project is a collection of resources for the Traveller tabletop RPG. Many of the resources included can be used with the game as-is. This project also includes a significant number of alternate rules to correct various issues with the game. Many of these rules may be used individually, or piecemeal, as preferred, but some are a significant re-work of entire systems (such as character creation, missiles, and Psionics). In those cases, the entire system needs to be used, and may be dependent on other systems or rules. The following tables indicate what is included in this project. There are also rules to serve as stop-gaps for complete overhauls.
 
-Based on MgT2E / 2022 Update
-
-[https://www.mongoosepublishing.com/collections/traveller-rpgs](https://www.mongoosepublishing.com/collections/traveller-rpgs)
 
 ## Books Referenced
 
-- Core Rulebook Update 2022
-- High Guard
-- Central Supply Catalog
-- Robot Handbook
-- Traveller Companion
+The works and changes included in this project are based on Mongoose Traveller 2nd Edition (MgT2E), and the 2022 Update. These books can be purchased from numerous online retailers, or directly from Mongoose Publishing at [https://www.mongoosepublishing.com/collections/traveller-rpgs](https://www.mongoosepublishing.com/collections/traveller-rpgs).
+
+The specific books referenced include:
+| Title                            | Version     | ISBN              |
+| -                                | -           | -                 |
+| Core Rulebook                    | 2022 Update | 978-1-913076-47-4 |
+| High Guard                       | 2nd Edition | 978-1-908460-54-7 |
+| Central Supply Catalog           | 2nd Edition | 978-1-908460-55-4 |
+| Traveller Companion              | 2nd Edition | 978-1-908460-59-2 |
 
 ## Tools
 
-| Tool                                    |
-| --------                                |
-| Ship Designer - Core Rulebook           |
-| Ship Designer - High Guard              |
-| Stock Tracker                           |
+| Tool                                                                                                    |
+| --------                                                                                                |
+| Ship Designer - Core Rulebook                                                                           |
+| Ship Designer - High Guard                                                                              |
+| [Stock Tracker](https://github.com/johnny-b-goode/traveller/releases/latest/download/stock_tracker.ods) |
 
 ## Additional Stuff
 
@@ -36,20 +37,21 @@ Based on MgT2E / 2022 Update
 
 ## Rule Changes
 
-| Rules                                   |
-| --------                                |
-| House Rules                             |
-| House Rules Tables                      |
+| Rules                                                                                                             |
+| --------                                                                                                          |
+| [House Rules](https://github.com/johnny-b-goode/traveller/blob/main/doc/house_rules.md)                           |
+| [House Rules Tables](https://github.com/johnny-b-goode/traveller/releases/latest/download/house_rules-tables.ods) |
+| [Character Creation](https://github.com/johnny-b-goode/traveller/blob/main/doc/rule_change-character_creation.md) |
 
 ## System Overhauls
 
-| System                                                                              |
-| --------                                                                            |
-| Character Creation                                                                  |
-| Weapon Damage                                                                       |
-| [Computers](https://github.com/johnny-b-goode/traveller/blob/main/doc/computers.md) |
-| [Missiles](https://github.com/johnny-b-goode/traveller/blob/main/doc/missiles.md)   |
-| [Psionics](https://github.com/johnny-b-goode/traveller/blob/main/doc/psionics.md)   |
+| System                                                                                                         |
+| --------                                                                                                       |
+| [Character Creation](https://github.com/johnny-b-goode/traveller/blob/main/doc/overhaul-character_creation.md) |
+| Weapon Damage                                                                                                  |
+| [Computers](https://github.com/johnny-b-goode/traveller/blob/main/doc/overhaul-computers.md)                   |
+| [Missiles](https://github.com/johnny-b-goode/traveller/blob/main/doc/overhaul-missiles.md)                     |
+| [Psionics](https://github.com/johnny-b-goode/traveller/blob/main/doc/overhaul-psionics.md)                     |
 
 ## Conventions
 
@@ -78,20 +80,20 @@ As a GM, I have never had any hesitation about creating house rules to change so
 There are certain principles that I think all systems should universally adhere to. Those principles are:
 
 1. It should go without stating, but in case anybody forgets, we are playing a game to have fun.
-2. Nobody wants a reality simulator. Even if somebody thinks they do, they don't. Reality is illness, debt, boredom, and taxes. If we wanted reality, we would have no need of playing a game. At best, trying to simulate reality slows down the things we are actually interested in. At worst, we end up spending an entire session where characters are dealing with virtual paperwork in order to submit an application to blah blah blah. Any reasonable system should generally abstract the boring stuff.
-3. With very few exceptions, in RPGs the GM is the absolute authority about what is and is what is not permissible. There must be a final arbiter about the rules of the world in which the story takes place, and that is the GM. Any given system is merely a starting point to work from.
-4. Suspension of belief should be maintained and maintainable. This does not require that all systems adhere to the real world as we understand it, or that all settings should be mundane. It does mean that any deviation from what is reasonably intuitive should be explained, and it should be handled consistently.
-5. Self-consistency should be maintained in all circumstances. If it is not, then the rules governing the universe have broken down and the universe ceases to exist. This violates the principle of suspension of belief, because regardless of whether or not players recognize it as such, they recognize an inconsistency that would not be tolerated by a natural world.
-6. All forces should exist in balanced opposition. This is not merely a good idea for games, but a fundamental law of the universe. If there is a possibility for a negative, there must be a corresponding and equal possibility for a positive.
-7. There is a maxim that states that arms and armor progress in such a way so as to maintain a rough equilibrium. This is simply a specific case of principle six. Weapons that are too powerful ultimately make a game boring, and also break suspension of belief because a society would only be able to tolerate a certain degree of lethality in combat before it collapsed. Armor that is too effective also ultimately makes a game boring, and makes combat pointless (if an end cannot be accomplished through violence, then the violence has no use).
-8. Players should have the ability to make their own choices. This has many implications:
-	A. Player choice should be respected. Anything that undoes a decision made by a player removes the consequences of that decision, and therefore the power of the player to effect the world through the actions of their characters.
-	B. Players should never be subject to negative consequences that they do not have the ability to change or influence. If so, the players choices have been demonstrated to have insufficient impact on the world, and have little or no meaning. This does not mean players should not be subject to negative outcomes, but that they should not be subject to those outcomes without some ability or opportunity to change them (unless the players have annoyed the GM to the point of "Rocks fall and you all die.").
-	C. Simply taking over a character's will without some action by the player precipitating that outcome. At the very least, any such attempt should be contestable. This means effects like Mind Control and Possession should only be possible if the player's character does something to make it possible, or looses a contest *that they had an even chance of winning*.
-	D. Time travel, aside from being narratively lazy, is almost always a mistake. The ability to retroactively change events that have already occurred removes the consequences of the choices associated with those events. This means that ALL of the choices made previously are subject to retroactive change, which means they have no actual significance.
-11. Consequences should be commensurate with the action that caused them. Failing a role to open a refrigerator should not have the same consequences as failing a role to defuse a bomb.
-12. Emergent effects should not break the world. For example, if there is too much piracy or theft in a specific area, the local economy would fail. The pirates and thieves would self regulate, or distribute their nefarious deeds over a larger area in order to avoid collapsing the economy, because then they would not longer have anything available to pirate or steal. This type of thing need not be stated in any rules, but if there are rules that create emergent situations that would cause a sufficient disturbance in the equilibrium of the setting, then the rules need to be corrected (otherwise the setting literally self-destructs).
-13. Common sense should prevail. If it does not, there should be a good reason.
+1. Nobody wants a reality simulator. Even if somebody thinks they do, they don't. Reality is illness, debt, boredom, and taxes. If we wanted reality, we would have no need of playing a game. At best, trying to simulate reality slows down the things we are actually interested in. At worst, we end up spending an entire session where characters are dealing with virtual paperwork in order to submit an application to blah blah blah. Any reasonable system should generally abstract the boring stuff.
+1. With very few exceptions, in RPGs the GM is the absolute authority about what is and is what is not permissible. There must be a final arbiter about the rules of the world in which the story takes place, and that is the GM. Any given system is merely a starting point to work from.
+1. Suspension of belief should be maintained and maintainable. This does not require that all systems adhere to the real world as we understand it, or that all settings should be mundane. It does mean that any deviation from what is reasonably intuitive should be explained, and it should be handled consistently.
+1. Self-consistency should be maintained in all circumstances. If it is not, then the rules governing the universe have broken down and the universe ceases to exist. This violates the principle of suspension of belief, because regardless of whether or not players recognize it as such, they recognize an inconsistency that would not be tolerated by a natural world.
+1. All forces should exist in balanced opposition. This is not merely a good idea for games, but a fundamental law of the universe. If there is a possibility for a negative, there must be a corresponding and equal possibility for a positive.
+1. There is a maxim that states that arms and armor progress in such a way so as to maintain a rough equilibrium. This is simply a specific case of principle six. Weapons that are too powerful ultimately make a game boring, and also break suspension of belief because a society would only be able to tolerate a certain degree of lethality in combat before it collapsed. Armor that is too effective also ultimately makes a game boring, and makes combat pointless (if an end cannot be accomplished through violence, then the violence has no use).
+1. Players should have the ability to make their own choices. This has many implications:
+  - Player choice should be respected. Anything that undoes a decision made by a player removes the consequences of that decision, and therefore the power of the player to effect the world through the actions of their characters.
+  - Players should never be subject to negative consequences that they do not have the ability to change or influence. If so, the players choices have been demonstrated to have insufficient impact on the world, and have little or no meaning. This does not mean players should not be subject to negative outcomes, but that they should not be subject to those outcomes without some ability or opportunity to change them (unless the players have annoyed the GM to the point of "Rocks fall and you all die.").
+  - Simply taking over a character's will without some action by the player precipitating that outcome. At the very least, any such attempt should be contestable. This means effects like Mind Control and Possession should only be possible if the player's character does something to make it possible, or looses a contest *that they had an even chance of winning*.
+  - Time travel, aside from being narratively lazy, is almost always a mistake. The ability to retroactively change events that have already occurred removes the consequences of the choices associated with those events. This means that ALL of the choices made previously are subject to retroactive change, which means they have no actual significance.
+1. Consequences should be commensurate with the action that caused them. Failing a role to open a refrigerator should not have the same consequences as failing a role to defuse a bomb.
+1. Emergent effects should not break the world. For example, if there is too much piracy or theft in a specific area, the local economy would fail. The pirates and thieves would self regulate, or distribute their nefarious deeds over a larger area in order to avoid collapsing the economy, because then they would not longer have anything available to pirate or steal. This type of thing need not be stated in any rules, but if there are rules that create emergent situations that would cause a sufficient disturbance in the equilibrium of the setting, then the rules need to be corrected (otherwise the setting literally self-destructs).
+1. Common sense should prevail. If it does not, there should be a good reason.
 
 ## Standard Conventions
 
@@ -113,12 +115,6 @@ Numerous issues will be addressed in their own sections, or in a general section
 3. Thing Three
 
 > NOTE: This is formatted differently than other text.
-
-## Test
-
-Test
-
-[test link](https://github.com/johnny-b-goode/traveller#additional-stuff)
 
 ![CC A-NC-SA 3.0](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)
 
