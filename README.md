@@ -8,7 +8,7 @@ This project is a collection of resources for the Traveller tabletop RPG. Many o
 The works and changes included in this project are based on Mongoose Traveller 2nd Edition (MgT2E), and the 2022 Update. These books can be purchased from numerous online retailers, or directly from Mongoose Publishing at [https://www.mongoosepublishing.com/collections/traveller-rpgs](https://www.mongoosepublishing.com/collections/traveller-rpgs).
 
 The specific books referenced include:
-| Title                            | Version     | ISBN              |
+| **Title**                        | **Version** | **ISBN**          |
 | -                                | -           | -                 |
 | Core Rulebook                    | 2022 Update | 978-1-913076-47-4 |
 | High Guard                       | 2nd Edition | 978-1-908460-54-7 |
@@ -17,7 +17,7 @@ The specific books referenced include:
 
 ## Tools
 
-| Tool                                                                                                    |
+| **Tool**                                                                                                |
 | --------                                                                                                |
 | Ship Designer - Core Rulebook                                                                           |
 | Ship Designer - High Guard                                                                              |
@@ -25,7 +25,7 @@ The specific books referenced include:
 
 ## Additional Stuff
 
-| Addition                                                                                |
+| **Addition**                                                                            |
 | --------                                                                                |
 | Ship Leasing                                                                            |
 | [Ship Shares](https://github.com/johnny-b-goode/traveller/blob/main/doc/ship_shares.md) |
@@ -37,15 +37,16 @@ The specific books referenced include:
 
 ## Rule Changes
 
-| Rules                                                                                                             |
+| **Rules**                                                                                                         |
 | --------                                                                                                          |
 | [House Rules](https://github.com/johnny-b-goode/traveller/blob/main/doc/house_rules.md)                           |
 | [House Rules Tables](https://github.com/johnny-b-goode/traveller/releases/latest/download/house_rules-tables.ods) |
 | [Character Creation](https://github.com/johnny-b-goode/traveller/blob/main/doc/rule_change-character_creation.md) |
+| [Skills](https://github.com/johnny-b-goode/traveller/blob/main/doc/rule_change-skills.md)                         |
 
 ## System Overhauls
 
-| System                                                                                                         |
+| **System**                                                                                                     |
 | --------                                                                                                       |
 | [Character Creation](https://github.com/johnny-b-goode/traveller/blob/main/doc/overhaul-character_creation.md) |
 | Weapon Damage                                                                                                  |
@@ -87,10 +88,10 @@ There are certain principles that I think all systems should universally adhere 
 1. All forces should exist in balanced opposition. This is not merely a good idea for games, but a fundamental law of the universe. If there is a possibility for a negative, there must be a corresponding and equal possibility for a positive.
 1. There is a maxim that states that arms and armor progress in such a way so as to maintain a rough equilibrium. This is simply a specific case of principle six. Weapons that are too powerful ultimately make a game boring, and also break suspension of belief because a society would only be able to tolerate a certain degree of lethality in combat before it collapsed. Armor that is too effective also ultimately makes a game boring, and makes combat pointless (if an end cannot be accomplished through violence, then the violence has no use).
 1. Players should have the ability to make their own choices. This has many implications:
-  - Player choice should be respected. Anything that undoes a decision made by a player removes the consequences of that decision, and therefore the power of the player to effect the world through the actions of their characters.
-  - Players should never be subject to negative consequences that they do not have the ability to change or influence. If so, the players choices have been demonstrated to have insufficient impact on the world, and have little or no meaning. This does not mean players should not be subject to negative outcomes, but that they should not be subject to those outcomes without some ability or opportunity to change them (unless the players have annoyed the GM to the point of "Rocks fall and you all die.").
-  - Simply taking over a character's will without some action by the player precipitating that outcome. At the very least, any such attempt should be contestable. This means effects like Mind Control and Possession should only be possible if the player's character does something to make it possible, or looses a contest *that they had an even chance of winning*.
-  - Time travel, aside from being narratively lazy, is almost always a mistake. The ability to retroactively change events that have already occurred removes the consequences of the choices associated with those events. This means that ALL of the choices made previously are subject to retroactive change, which means they have no actual significance.
+    1. Player choice should be respected. Anything that undoes a decision made by a player removes the consequences of that decision, and therefore the power of the player to effect the world through the actions of their characters.
+    1. Players should never be subject to negative consequences that they do not have the ability to change or influence. If so, the players choices have been demonstrated to have insufficient impact on the world, and have little or no meaning. This does not mean players should not be subject to negative outcomes, but that they should not be subject to those outcomes without some ability or opportunity to change them (unless the players have annoyed the GM to the point of "Rocks fall and you all die.").
+    1. Simply taking over a character's will without some action by the player precipitating that outcome. At the very least, any such attempt should be contestable. This means effects like Mind Control and Possession should only be possible if the player's character does something to make it possible, or looses a contest *that they had an even chance of winning*.
+    1. Time travel, aside from being narratively lazy, is almost always a mistake. The ability to retroactively change events that have already occurred removes the consequences of the choices associated with those events. This means that ALL of the choices made previously are subject to retroactive change, which means they have no actual significance.
 1. Consequences should be commensurate with the action that caused them. Failing a role to open a refrigerator should not have the same consequences as failing a role to defuse a bomb.
 1. Emergent effects should not break the world. For example, if there is too much piracy or theft in a specific area, the local economy would fail. The pirates and thieves would self regulate, or distribute their nefarious deeds over a larger area in order to avoid collapsing the economy, because then they would not longer have anything available to pirate or steal. This type of thing need not be stated in any rules, but if there are rules that create emergent situations that would cause a sufficient disturbance in the equilibrium of the setting, then the rules need to be corrected (otherwise the setting literally self-destructs).
 1. Common sense should prevail. If it does not, there should be a good reason.
