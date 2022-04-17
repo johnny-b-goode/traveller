@@ -109,14 +109,6 @@ In addition to the principles listed above, there are a number of conventions th
 
 Numerous issues will be addressed in their own sections, or in a general section.
 
-## Other Things and Other Stuff
-
-1. Thing one
-2. Thing Two
-3. Thing Three
-
-> NOTE: This is formatted differently than other text.
-
 ![CC A-NC-SA 3.0](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
