@@ -1,5 +1,7 @@
 # Computers
 
+This set of rule changes is intended to function as a stop-gap for, or lighter weight alternative to, the overhaul to the computers system. In particular, the overhaul would deal with the ramifications for ship design, particularly cost, more granularly.
+
 ## Summary
 
 A brief explanation of the change(s).
@@ -34,7 +36,7 @@ Beyond TL 8, computers are so powerful that for most intents and purposes their 
 
 ### Ramifications
 
-Ramifications of these changes are far reaching. 
+Ramifications of these changes are far reaching, particularly for ships. For the sake of simplicity, referees and players can simply treat all ships as having Core/100/fib.
 
 ## Justification
 
@@ -49,13 +51,14 @@ Humanity can already produce computers capable of doing almost everything descri
 The trend in reality has been for computers to increase in capability for a given price point. Computers of the future can reasonably be expected to continue this trend. One of the impacts of this is that the primary limitation for ship’s computers should be TL, not cost.
 
 Another issue is that the caps on processing power are arbitrary (ie, there are no non-ship computers greater than /5). Additional discrepencies with current computer technology include:
+- Ships computers seem to be treated as one-off builds. In reality, at any volume of production they would become commodity designs (as in the present day).
 - There is no concept of modularity at all (despite the game specifically mentioning that ship's computers are distributed but have a central core [Core Rulebook, page ?; High Guard, page 63]).
-- Item 2
+- Software cannot be copied because "it's too big" (I believe this reference is in the core rulebook). A more logical reason software cannot be copied would be because its licensed, or locked to a hardware device (both models used in present day reality).
 
 Computers esentially have infinite storage:
 >"Note that the storage capacity of computers is not used in Traveller as, beyond TL 8, the capacity of even a modest computer is effectively unlimited."
 
-I agree with this mechanic, but software cannot be copied because "it's too big" (I believe this reference is in the core rulebook). This makes no sense. A more logical reason software cannot be copied would be because its licensed, or locked to a hardware device (both models used in present day reality).
+I agree with this mechanic, as trying to keep track of storage consumed is well within the territory of reality simulation.
 
 ### Analysis
 

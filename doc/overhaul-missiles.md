@@ -83,7 +83,7 @@ If the missile contained separate thrusters for maneuvering, which would be like
 ### Point Defences
 Neither of the preceding points address the most glaring problem with missiles in an advanced technology (sci-fi) setting: lasers. Kinetic energy weapons with reletivistic velocities also have very significant potential to minimize the threat posed by missile systems.
 
-Existing technologies mitigate this threat:
+Existing technologies already mitigate this threat:
 - https://en.wikipedia.org/wiki/Close-in_weapon_system
 - https://en.wikipedia.org/wiki/AN/SEQ-3_Laser_Weapon_System
 - https://www.af.mil/News/Article-Display/Article/1836495/air-force-research-laboratory-completes-successful-shoot-down-of-air-launched-m/
@@ -96,4 +96,7 @@ The game already includes numerous point defence options at every scale, and in 
 - This point is reinforced by the fact that some of the grav tank descriptions reference the inefectiveness of missiles given the capability of their point defences.
 
 ### Possible Mitigating Conditions
-In very close combat, against an unmassed enemy, if launched from a blind spot in a ship's point defences, missiles might be viable.
+
+In the narrow window between TL 5 / 6 and mid-TL 7 / TL 8, missiles would be a viable weapons system.
+
+At TL 8 or above, in very close combat, against an unmassed enemy, if launched from a blind spot in a ship's point defences, missiles might be viable.

@@ -57,13 +57,24 @@ SUB Main
 	REM MSGBOX dblRestrictedPercent
 
 	DO WHILE NOT (objStocks.getCellByPosition(0, intCount).Type = com.sun.star.table.CellContentType.EMPTY)
-		DIM objCellA			AS OBJECT
-		objCellA = objStocks.getCellByPosition(0, intCount)
+		DIM objCellC			AS OBJECT
+		DIM objCellD			AS OBJECT
+		DIM objCellE			AS OBJECT
+		DIM objCellF			AS OBJECT
+		DIM objCellG			AS OBJECT
+		DIM objCellH			AS OBJECT
+		DIM objCellI			AS OBJECT
+
+		objCellC = objStocks.getCellByPosition(2, intCount)
+		objCellD = objStocks.getCellByPosition(3, intCount)
+		objCellE = objStocks.getCellByPosition(4, intCount)
+		objCellF = objStocks.getCellByPosition(5, intCount)
+		objCellG = objStocks.getCellByPosition(6, intCount)
+		objCellH = objStocks.getCellByPosition(7, intCount)
+		objCellI = objStocks.getCellByPosition(8, intCount)
+
 		REM if C is empty, set to "Yes"
 		IF (objStocks.getCellByPosition(2, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			DIM objCellC		AS OBJECT
-			objCellC = objStocks.getCellByPosition(2, intCount)
-
 			IF (intCount > 1) THEN
 				DIM objCellCRange	AS NEW com.sun.star.table.CellRangeAddress
 
@@ -81,32 +92,21 @@ SUB Main
 
 		REM			if D is empty, set to $parameters.$B$31 (Starting Shares)
 		IF (objStocks.getCellByPosition(3, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			DIM objCellD		AS OBJECT
-			objCellD = objStocks.getCellByPosition(3, intCount)
 			objCellD.Value = lngIssuedShares
 		END IF
 
 		REM			if E is empty, set to D * $parameters.$B$32 (Treasury Shares)
 		IF (objStocks.getCellByPosition(4, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			REM DIM objCellD		AS OBJECT
-			DIM objCellE		AS OBJECT
-			REM objCellD = objStocks.getCellByPosition(3, intCount)
-			objCellE = objStocks.getCellByPosition(4, intCount)
 			objCellE.Value = CLNG((objCellD.Value * dblTreasuryPercent))
 		END IF
 
 		REM	if F is empty, set to D * $parameters.$B$33 (Restricted Shares)
 		IF (objStocks.getCellByPosition(5, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			DIM objCellF		AS OBJECT
-			objCellF = objStocks.getCellByPosition(5, intCount)
 			objCellF.Value = CLNG((objCellD.Value * dblRestrictedPercent))
 		END IF
 
 		REM	if G is empty, set to result of convoluted formula in $parameters.$D$29 (needs modification) (Fluctuation Rate)
 		IF (objStocks.getCellByPosition(6, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			DIM objCellG		AS OBJECT
-			objCellG = objStocks.getCellByPosition(6, intCount)
-
 			IF (intCount > 1) THEN
 				DIM objCellGRange	AS NEW com.sun.star.table.CellRangeAddress
 
@@ -128,9 +128,6 @@ SUB Main
 
 		REM	if H is empty, set to result of convoluted formula in $parameters.$D$30 (Trend)
 		IF (objStocks.getCellByPosition(7, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			DIM objCellH		AS OBJECT
-			objCellH = objStocks.getCellByPosition(7, intCount)
-
 			IF (intCount > 1) THEN
 				DIM objCellHRange	AS NEW com.sun.star.table.CellRangeAddress
 
@@ -152,8 +149,6 @@ SUB Main
 
 		REM	if I is empty, calculate price and set (Current Price)
 		IF (objStocks.getCellByPosition(8, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			DIM objCellI		AS OBJECT
-			objCellI = objStocks.getCellByPosition(8, intCount)
 			objCellI.Value = (DICEROLL_IMPLEMENTATION(strPriceRoll) * dblPriceMultiplier)
 		END IF
 
