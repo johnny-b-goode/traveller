@@ -58,11 +58,11 @@ The *finances* tab is where the bulk of the utility of the PFT resides. Characte
 
 - **Player** - The name of the player controlling the character. Note that "NPC" is a special value in this column, and should be applied to NPC characters.
 - **Character** - The name of the character.
-- Crew Profit Percentage - The percentage of the *Crew Profit Percentage* allocated to this character. If *Crew Profit Percentage* is zero or blank, this value is ignored. If *Crew Profit Percentage* is not blank, then the total of this value for all characters should be 100%.
-- Ship Shares - The number of ship shares, in this ship, held by the character. See [Ship Shares](https://github.com/johnny-b-goode/traveller/blob/main/doc/ship_shares.md) for an expanded description of what ship shares represent and how they are handled. If players do not wish to use the expanded description of ship shares, they may simply convert ship shares into ownership stake at a ratio of Cr 1 Million per ship share.
-- Ship Stake - The character's ownership stake of the ship, in credits. This value is specified in credits because it is somewhat easier to track and it helps to avoid excessive precision (places after the decimal point) in tracked values.
-- Pooled Cash - The amount of cash the character has contributed to the ships operation and investment fund. Expenditures are subtracted from pooled cash proportional to the amount contributed by each player (so the proportions remain the same unless intentionally changed). These proportions are also used in the distribution of profits (though not solely), and ship ownership stake as the mortgage is paid.
-- Cash on Hand - Represents the cash immediately available to the character. This can be used as the player so chooses.
+- **Crew Profit** Percentage - The percentage of the *Crew Profit Percentage* allocated to this character. If *Crew Profit Percentage* is zero or blank, this value is ignored. If *Crew Profit Percentage* is not blank, then the total of this value for all characters should be 100%.
+- **Ship Shares** - The number of ship shares, in this ship, held by the character. See [Ship Shares](https://github.com/johnny-b-goode/traveller/blob/main/doc/ship_shares.md) for an expanded description of what ship shares represent and how they are handled. If players do not wish to use the expanded description of ship shares, they may simply convert ship shares into ownership stake at a ratio of Cr 1 Million per ship share.
+- **Ship Stake** - The character's ownership stake of the ship, in credits. This value is specified in credits because it is somewhat easier to track and it helps to avoid excessive precision (places after the decimal point) in tracked values.
+- **Pooled Cash** - The amount of cash the character has contributed to the ships operation and investment fund. Expenditures are subtracted from pooled cash proportional to the amount contributed by each player (so the proportions remain the same unless intentionally changed). These proportions are also used in the distribution of profits (though not solely), and ship ownership stake as the mortgage is paid.
+- **Cash on Hand** - Represents the cash immediately available to the character. This can be used as the player so chooses.
 
 The following actions can be taken on the *finances* tab.
 
@@ -86,6 +86,6 @@ A Quick Debit can be selected from the *Quick Debit* drop-down. Selecting a Quic
 The *ledger* is a record of the transactions that have been performed. This ledger is not intended to be auditable in accordance to Generally Acceptable Accounting Practices (GAAP), but merely to provide a basic record of what has been transacted (such as keeping track of whether or not the ship's mortgage has been paid for the month). The fields in the ledger are:
 
 - **Date** - The real world date the transaction was performed (it seems easier to keep track of than the in-game dates).
-- Note - Not required but is strongly encouraged, otherwise the transaction history in the ledger will not be very useful.
-- Debit / Credit - Whether or not the transaction was a debit (money the characters remitted) or a credit (money the characters received).
-- Amount - The amount of the transaction.
+- **Note** - Not required but is strongly encouraged, otherwise the transaction history in the ledger will not be very useful.
+- **Debit** / Credit - Whether or not the transaction was a debit (money the characters remitted) or a credit (money the characters received).
+- **Amount** - The amount of the transaction.

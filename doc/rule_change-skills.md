@@ -10,7 +10,12 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 
 ### Book
 
-Description(s) of change(s)
+Core Rulebook, page 55
+	Remove the first sentence of the second paragraph.
+	Change paragraph six to the following:
+		"Failure indicates the Traveller has not learned enough to increase their skill level, but may try again after another successful Study Period. If a traveller fails their EDU check after 8 weeks, they can try again after training for half a training period, to a minimum of 1 week. Halving continues until the traveller acquires the skill or switches to a different skill.
+		
+		The above change means that if a Traveller studies for eight weeks, and fails their EDU check, they can try again after 4 weeks of additional training. If they fail again, they would be able to try again after two weeks of further training."
 
 ## New Rules
 

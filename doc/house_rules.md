@@ -1,16 +1,4 @@
 ================================================================================
-Training:
-================================================================================
-I thought about modifying training to take into consideration a character's INT. The idea would be subtract the character's INT DM (or perhaps half their INT DM) from the 8 week baseline. This would mean for characters with a negative DM, they would add (subtracting a negative number) to the eight weeks. I think this may be a bit too aggressive a change, so I think we start with the below and possibly revisit this notion if needed.
-
-Core Rulebook, page 55
-	Remove the first sentence of the second paragraph.
-	Change paragraph six to the following:
-		"Failure indicates the Traveller has not learned enough to increase their skill level, but may try again after another successful Study Period. Travellers gain DM+1 to their next EDU check to learn a skill for every previously failed EDU check attempting to learn that skill."
-
-	The above change means that if a Traveller studies for eight weeks, and fails their EDU check, they gain a DM+1 to their next EDU check. If they study for another period, and fail their EDU check again, they would then gain a DM+2 to their next EDU check. This would continue until the Traveller gains the skill by default (after seven attempts for a Traveller with a DM 0 for EDU), or if the player decides to switch to training another skill.
-
-================================================================================
 Task Checks:
 ================================================================================
 Core Rulebook, page 58
