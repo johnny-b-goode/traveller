@@ -17,17 +17,24 @@ The specific books referenced include:
 | Traveller Companion              | 2nd Edition | 978-1-908460-59-2 |
 
 The following tables indicate what is included in this project.
+Tools are resources used to make playing the game easier. These are primarily oriented towards reducing the effort required for various book-keeping tasks. The primary exception to this is the Errata, which is simply used to track errors or issues found in the various books referenced.
+Additional Stuff is new content (characters, adventures, rules or mechanics, items, weapons, vehicles, ships, etc.), in some cases providing additional background for existing systems or items.
+Rule Changes are changes, possibly including additions and / or removals, to the rules of the system. Rule Changes tend to be narrower in scope than System Overhauls.
+System Overhauls are complete reimplementations of an entire system. These are done whenever the number of rule changes is too significant or involves too many internal references to be handled by a Rule Change.
 
 ## Tools
 
 | **Tool**                                                                                                                   |
 | --------                                                                                                                   |
+| [Errata](https://github.com/johnny-b-goode/traveller/blob/main/doc/errata.md)                                              |
 | Character Creation Flow Chart                                                                                              |
 | [Player Finance Tracker](https://github.com/johnny-b-goode/traveller/blob/main/doc/instructions-player_finance_tracker.md) |
 | Reading World Codes Reference                                                                                              |
 | Ship Designer - Core Rulebook                                                                                              |
 | Ship Designer - High Guard                                                                                                 |
+| Ship Record                                                                                                                |
 | [Stock Tracker](https://github.com/johnny-b-goode/traveller/blob/main/doc/instructions-stock_tracker.md)                   |
+| [Trade Tool](https://github.com/johnny-b-goode/traveller/blob/main/doc/instructions-trade_tool.md)                         |
 
 ## Additional Stuff
 
@@ -40,6 +47,10 @@ The following tables indicate what is included in this project.
 | Gecko Variants                                                                          |
 | Mobile Air Defence                                                                      |
 | Custom Free Trader                                                                      |
+| Custom Pinnace                                                                          |
+| 400 Ton Adventurer                                                                      |
+| 600 Ton Adventurer                                                                      |
+| 800 Ton Adventurer                                                                      |
 
 ## Rule Changes
 
@@ -84,6 +95,12 @@ Having played a couple other systems, and having varying degrees of familiarity 
 
 As a GM, I have never had any hesitation about creating house rules to change something about a system to make it more to my liking or that of my group. It is normal for the groups I have played with to have house rules, and my philosophy has always been that as long as they are agreed to before being put into use there is no reason to avoid them. With the other systems I have used, this has been a handful of rules (half a page or so). With Traveller, the number of rules required to reconcile various issues quickly became too large to manage through the usual means (a word document).
 
+This project was created in order to better track and maintain these corrections, as well as to share various resources created in support of Traveller.
+
+## Fixing the Issues
+
+Numerous issues will be addressed in their own sections, or in a general section. See the *Rule Changes* and *System Overhauls* tables above for the various resources that address issues with the mechanics of Traveller.
+
 ## Principles to Game By
 
 There are certain principles that I think all systems should universally adhere to. Those principles are:
@@ -123,9 +140,9 @@ When making changes to the game system, there are certain aspects about the game
   1. We want to avoid creating extra work for GMs
   1. In some cases, this may not be possible, or the target of the change may be the setting itself. This is perfectly acceptable, but should avoid breaking the rest of the universe. If in doubt, let the ## Principles to Game By guide you.
 
-## Fixing the Issues
+## Contributing
 
-Numerous issues will be addressed in their own sections, or in a general section. See the *Rule Changes* and *System Overhauls* tables above for the various resources that address issues with the mechanics of Traveller.
+If you are interested in contributing to this project, please submit a pull request for any fixes you would like to see incorporated. Alternatively, please feel free to reach out through GitHub.
 
 ![CC A-NC-SA 3.0](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)
 
