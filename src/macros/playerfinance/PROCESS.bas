@@ -12,6 +12,8 @@ DIM intFinancesRowStart			AS INTEGER
 DIM intLedgerUserStartColumn	AS INTEGER
 DIM intCreditDistColumn			AS INTEGER
 DIM intDebitDistColumn			AS INTEGER
+DIM intCashOnHandColumn			AS INTEGER
+DIM intPooledCashColumn			AS INTEGER
 DIM intTransferPaymentColumn	AS INTEGER
 DIM dblShipValue				AS DOUBLE
 REM DIM dblStartShipMortgage		AS DOUBLE
@@ -51,6 +53,8 @@ FUNCTION INIT
 	SET objService = createUnoService("com.sun.star.sheet.FunctionAccess")
 	intCreditDistColumn = 10
 	intDebitDistColumn = 9
+	intCashOnHandColumn = 7
+	intPooledCashColumn	= 6
 	intTransferPaymentColumn = 12
 	intFinancesRowStart = 14
 	intLedgerUserStartColumn = 5
@@ -410,8 +414,80 @@ SUB DEBIT
 	END IF
 END SUB
 
-SUB TRANSFER
-	MSGBOX "PlayerFinance.PROCESS.TRANSFER"
+SUB XFERTOPOOLED
+	REM MSGBOX "PlayerFinance.PROCESS.XFERTOPOOLED"
+	INIT()
+
+	DIM aValues(1)				AS DOUBLE
+	DIM intFinancesRowCount		AS INTEGER
+	DIM intNumberOfCrew			AS INTEGER
+
+	intFinancesRowCount = intFinancesRowStart
+	intNumberOfCrew = 0
+
+	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	END IF
+
+	IF (intNumberOfCrew > 0) THEN
+		REDIM aValues(intNumberOfCrew) AS DOUBLE
+	END IF
+
+	DO WHILE (intFinancesRowCount < (intFinancesRowStart + intNumberOfCrew))
+		DIM dblNewPooledCash			AS DOUBLE
+		DIM dblNewCashOnHand			AS DOUBLE
+		DIM dblOldPooledCash			AS DOUBLE
+		DIM dblOldCashOnHand			AS DOUBLE
+		DIM dblTransferAmount			AS DOUBLE
+		dblNewPooledCash = 0
+		dblNewCashOnHand = 0
+		dblOldPooledCash = 0
+		dblOldCashOnHand = 0
+		dblTransferAmount = 0
+
+		IF NOT (objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			dblTransferAmount = objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Value
+
+			IF (dblTransferAmount > 0) THEN
+				DIM dblControlTotal			AS DOUBLE
+				dblControlTotal = 0
+
+				IF NOT (objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+					dblOldCashOnHand = objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value
+				END IF
+
+				IF NOT (objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+					dblOldPooledCash = objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value
+				END IF
+
+				IF NOT (dblOldPooledCash > dblTransferAmount) THEN
+					MSGBOX ("ERROR: insufficient funds for transfer")
+					EXIT SUB
+				END IF
+
+				dblControlTotal = (dblOldPooledCash + dblOldCashOnHand)
+				dblNewPooledCash = (dblOldPooledCash + dblTransferAmount)
+				dblNewCashOnHand = (dblOldCashOnHand - dblTransferAmount)
+
+				IF ((dblNewPooledCash + dblNewCashOnHand) = dblControlTotal) THEN
+					objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value = dblNewCashOnHand
+					objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value = dblNewPooledCash
+				END IF
+			END IF
+		END IF
+
+		aValues((intFinancesRowCount - intFinancesRowStart)) = dblTransferAmount
+		intFinancesRowCount = (intFinancesRowCount + 1)
+	LOOP
+
+	objFinancesNoteCell.String = "transfer from cash on hand to pooled cash"
+	JOURNAL("Credit", aValues)
+	objFinances.getCellRangeByName("$M$15:$M$34").clearContents(com.sun.star.sheet.CellFlags.VALUE)
+	objFinances.getCellRangeByName("$R$38").clearContents(com.sun.star.sheet.CellFlags.STRING)
+END SUB
+
+SUB XFERFROMPOOLED
+	MSGBOX "PlayerFinance.PROCESS.XFERFROMPOOLED"
 END SUB
 
 SUB PURCHASE
