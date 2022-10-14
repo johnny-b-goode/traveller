@@ -414,8 +414,8 @@ SUB DEBIT
 	END IF
 END SUB
 
+REM TODO: merge and parameterize the two transfer methods
 SUB XFERTOPOOLED
-	REM MSGBOX "PlayerFinance.PROCESS.XFERTOPOOLED"
 	INIT()
 
 	DIM aValues(1)				AS DOUBLE
@@ -449,8 +449,8 @@ SUB XFERTOPOOLED
 			dblTransferAmount = objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Value
 
 			IF (dblTransferAmount > 0) THEN
-				DIM dblControlTotal			AS DOUBLE
-				dblControlTotal = 0
+				REM DIM dblControlTotal			AS DOUBLE
+				REM dblControlTotal = 0
 
 				IF NOT (objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
 					dblOldCashOnHand = objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value
@@ -460,16 +460,16 @@ SUB XFERTOPOOLED
 					dblOldPooledCash = objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value
 				END IF
 
-				IF NOT (dblOldPooledCash > dblTransferAmount) THEN
-					MSGBOX ("ERROR: insufficient funds for transfer")
+				IF NOT (dblOldCashOnHand > dblTransferAmount) THEN
+					MSGBOX ("ERROR: insufficient cash on hand for transfer")
 					EXIT SUB
 				END IF
 
-				dblControlTotal = (dblOldPooledCash + dblOldCashOnHand)
+				REM dblControlTotal = (dblOldPooledCash + dblOldCashOnHand)
 				dblNewPooledCash = (dblOldPooledCash + dblTransferAmount)
 				dblNewCashOnHand = (dblOldCashOnHand - dblTransferAmount)
 
-				IF ((dblNewPooledCash + dblNewCashOnHand) = dblControlTotal) THEN
+				IF ((dblNewPooledCash + dblNewCashOnHand) = (dblOldPooledCash + dblOldCashOnHand)) THEN
 					objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value = dblNewCashOnHand
 					objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value = dblNewPooledCash
 				END IF
@@ -487,11 +487,129 @@ SUB XFERTOPOOLED
 END SUB
 
 SUB XFERFROMPOOLED
-	MSGBOX "PlayerFinance.PROCESS.XFERFROMPOOLED"
+	REM MSGBOX "PlayerFinance.PROCESS.XFERFROMPOOLED"
+	INIT()
+
+	DIM aValues(1)				AS DOUBLE
+	DIM intFinancesRowCount		AS INTEGER
+	DIM intNumberOfCrew			AS INTEGER
+
+	intFinancesRowCount = intFinancesRowStart
+	intNumberOfCrew = 0
+
+	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	END IF
+
+	IF (intNumberOfCrew > 0) THEN
+		REDIM aValues(intNumberOfCrew) AS DOUBLE
+	END IF
+
+	DO WHILE (intFinancesRowCount < (intFinancesRowStart + intNumberOfCrew))
+		DIM dblNewPooledCash			AS DOUBLE
+		DIM dblNewCashOnHand			AS DOUBLE
+		DIM dblOldPooledCash			AS DOUBLE
+		DIM dblOldCashOnHand			AS DOUBLE
+		DIM dblTransferAmount			AS DOUBLE
+		dblNewPooledCash = 0
+		dblNewCashOnHand = 0
+		dblOldPooledCash = 0
+		dblOldCashOnHand = 0
+		dblTransferAmount = 0
+
+		IF NOT (objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			dblTransferAmount = objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Value
+
+			IF (dblTransferAmount > 0) THEN
+				REM DIM dblControlTotal			AS DOUBLE
+				REM dblControlTotal = 0
+
+				IF NOT (objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+					dblOldCashOnHand = objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value
+				END IF
+
+				IF NOT (objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+					dblOldPooledCash = objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value
+				END IF
+
+				IF NOT (dblOldPooledCash > dblTransferAmount) THEN
+					MSGBOX ("ERROR: insufficient pooled cash for transfer")
+					EXIT SUB
+				END IF
+
+				REM dblControlTotal = (dblOldPooledCash + dblOldCashOnHand)
+				dblNewPooledCash = (dblOldPooledCash - dblTransferAmount)
+				dblNewCashOnHand = (dblOldCashOnHand + dblTransferAmount)
+
+				IF ((dblNewPooledCash + dblNewCashOnHand) = (dblOldPooledCash + dblOldCashOnHand)) THEN
+					objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value = dblNewCashOnHand
+					objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value = dblNewPooledCash
+				END IF
+			END IF
+		END IF
+
+		aValues((intFinancesRowCount - intFinancesRowStart)) = dblTransferAmount
+		intFinancesRowCount = (intFinancesRowCount + 1)
+	LOOP
+
+	objFinancesNoteCell.String = "transfer from pooled cash to cash on hand"
+	JOURNAL("Debit", aValues)
+	objFinances.getCellRangeByName("$M$15:$M$34").clearContents(com.sun.star.sheet.CellFlags.VALUE)
+	objFinances.getCellRangeByName("$R$38").clearContents(com.sun.star.sheet.CellFlags.STRING)
 END SUB
 
 SUB PURCHASE
-	MSGBOX "PlayerFinance.PROCESS.PURCHASE"
+	INIT()
+
+	DIM aValues(1)				AS DOUBLE
+	DIM intFinancesRowCount		AS INTEGER
+	DIM intNumberOfCrew			AS INTEGER
+
+	intFinancesRowCount = intFinancesRowStart
+	intNumberOfCrew = 0
+
+	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	END IF
+
+	IF (intNumberOfCrew > 0) THEN
+		REDIM aValues(intNumberOfCrew) AS DOUBLE
+	END IF
+
+	DO WHILE (intFinancesRowCount < (intFinancesRowStart + intNumberOfCrew))
+		DIM dblOldCashOnHand			AS DOUBLE
+		DIM dblTransferAmount			AS DOUBLE
+		dblOldCashOnHand = 0
+		dblTransferAmount = 0
+
+		IF NOT (objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			dblTransferAmount = objFinances.getCellByPosition(intTransferPaymentColumn, intFinancesRowCount).Value
+
+			IF (dblTransferAmount > 0) THEN
+				IF NOT (objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+					dblOldCashOnHand = objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value
+				END IF
+
+				IF NOT (dblOldCashOnHand > dblTransferAmount) THEN
+					MSGBOX ("ERROR: insufficient pooled cash for purchase")
+					EXIT SUB
+				END IF
+
+				objFinances.getCellByPosition(intCashOnHandColumn, intFinancesRowCount).Value = (dblOldCashOnHand - dblTransferAmount)
+			END IF
+		END IF
+
+		aValues((intFinancesRowCount - intFinancesRowStart)) = dblTransferAmount
+		intFinancesRowCount = (intFinancesRowCount + 1)
+	LOOP
+
+	IF (objFinancesNoteCell.Type = com.sun.star.table.CellContentType.EMPTY) THEN
+		objFinancesNoteCell.String = "purchase using cash on hand"
+	END IF
+
+	JOURNAL("Debit", aValues)
+	objFinances.getCellRangeByName("$M$15:$M$34").clearContents(com.sun.star.sheet.CellFlags.VALUE)
+	objFinances.getCellRangeByName("$R$38").clearContents(com.sun.star.sheet.CellFlags.STRING)
 END SUB
 
 SUB CAPPOOLEDCASH
