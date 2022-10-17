@@ -8,7 +8,7 @@ DIM booEvenCrewProfit			AS BOOLEAN
 DIM booEvenShipStake			AS BOOLEAN
 REM DIM booBalancePooledCash		AS BOOLEAN
 DIM intFinancesRowStart			AS INTEGER
-
+DIM intNumberOfCrew				AS INTEGER
 DIM intLedgerUserStartColumn	AS INTEGER
 DIM intCreditDistColumn			AS INTEGER
 DIM intDebitDistColumn			AS INTEGER
@@ -62,7 +62,11 @@ FUNCTION INIT
 	objParameters = objSheets.getByName("parameters")
 	objFinances = objSheets.getByName("finances")
 	objLedger = objSheets.getByName("ledger")
-	objFinances
+
+	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	END IF
+
 	objFinancesNoteCell = objFinances.getCellByPosition(17, 37)
 	objFinancesAmountCell = objFinances.getCellByPosition(17, 40)
 	objFinancesCreditCostCell = objFinances.getCellByPosition(19, 46)
@@ -169,6 +173,7 @@ FUNCTION JOURNAL (strType, aAmounts)
 	LOOP
 END FUNCTION
 
+REM TODO: fix variable names and cleanup loop structures
 SUB CREDIT
 	INIT()
 
@@ -176,9 +181,10 @@ SUB CREDIT
 		REM create an array to temporarily store values, as this is going to be sufficiently complicated to require it
 		DIM aCreditValues(1)		AS DOUBLE
 		DIM intLedgerColumn			AS INTEGER
-		DIM intNumberOfCrew			AS INTEGER
-		DIM intPlayerCount			AS INTEGER
-		DIM intLastPlayerRow		AS INTEGER
+		REM DIM intNumberOfCrew			AS INTEGER
+		REM DIM intPlayerCount			AS INTEGER
+		DIM intFinancesRowCount		AS INTEGER
+		REM DIM intLastPlayerRow		AS INTEGER
 		DIM dblCreditToCrew			AS DOUBLE
 		DIM dblRemainingCredit		AS DOUBLE
 		REM DIM dblControlTotal			AS DOUBLE
@@ -189,12 +195,15 @@ SUB CREDIT
 		IF NOT (objFinancesAmountCell.Type = com.sun.star.table.CellContentType.EMPTY) THEN
 			dblRemainingCredit = objFinancesAmountCell.Value
 			dblCreditValuesTotal = 0
-			intPlayerCount = intFinancesRowStart
-			REM intNumberOfCrew = 0
+			intFinancesRowCount = intFinancesRowStart
 
-			IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-				REDIM aCreditValues(objFinances.getCellByPosition(1, 35).Value) AS DOUBLE
-				intLastPlayerRow = (intPlayerCount + objFinances.getCellByPosition(1, 35).Value)
+			REM IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			REM 	intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+			REM END IF
+
+			IF (intNumberOfCrew > 0) THEN
+				REDIM aCreditValues(intNumberOfCrew) AS DOUBLE
+				REM intLastPlayerRow = (intFinancesRowCount + intNumberOfCrew)
 			END IF
 		END IF
 
@@ -228,11 +237,11 @@ SUB CREDIT
 				dblTotalCost = objFinancesCreditCostCell.Value
 				REM dblTotalPooledCash = objFinances.getCellByPosition(6, 35).Value
 
-				DO WHILE (intPlayerCount < intLastPlayerRow)
+				DO WHILE (intFinancesRowCount < (intFinancesRowStart + intNumberOfCrew))
 					REM TODO: verify indexing here:
-					aCreditValues((intPlayerCount - intFinancesRowStart)) = (objFinances.getCellByPosition(intDebitDistColumn, intPlayerCount).Value * dblTotalCost)
-					dblCreditValuesTotal = (dblCreditValuesTotal + aCreditValues((intPlayerCount - intFinancesRowStart)))
-					intPlayerCount = (intPlayerCount + 1)
+					aCreditValues((intFinancesRowCount - intFinancesRowStart)) = (objFinances.getCellByPosition(intDebitDistColumn, intFinancesRowCount).Value * dblTotalCost)
+					dblCreditValuesTotal = (dblCreditValuesTotal + aCreditValues((intFinancesRowCount - intFinancesRowStart)))
+					intFinancesRowCount = (intFinancesRowCount + 1)
 				LOOP
 			END IF
 
@@ -246,24 +255,43 @@ SUB CREDIT
 			dblRemainingCredit = (dblRemainingCredit - dblTotalCost)
 		END IF
 
-		REM skip a bit
-		intPlayerCount = intFinancesRowStart
-
 		IF (dblRemainingCredit > 0) THEN
+			intFinancesRowCount = intFinancesRowStart
 			dblCreditValuesTotal = 0
 
-			DO WHILE NOT (objFinances.getCellByPosition(1, intPlayerCount).Type = com.sun.star.table.CellContentType.EMPTY)
-				aCreditValues((intPlayerCount - intFinancesRowStart)) = (aCreditValues((intPlayerCount - intFinancesRowStart)) + (objFinances.getCellByPosition(intCreditDistColumn, intPlayerCount).Value * dblRemainingCredit))
-				dblCreditValuesTotal = (dblCreditValuesTotal + aCreditValues((intPlayerCount - intFinancesRowStart)))
-				intPlayerCount = (intPlayerCount + 1)
+			REM MSGBOX ("intFinancesRowCount: " + intFinancesRowCount + ", intNumberOfCrew: " + intNumberOfCrew)
+			REM MSGBOX ("(intFinancesRowCount + intNumberOfCrew): " + (intFinancesRowCount + intNumberOfCrew))
+			DO WHILE (intFinancesRowCount < (intFinancesRowStart + intNumberOfCrew))
+			REM DO WHILE NOT (objFinances.getCellByPosition(1, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY)
+				aCreditValues((intFinancesRowCount - intFinancesRowStart)) = (aCreditValues((intFinancesRowCount - intFinancesRowStart)) + (objFinances.getCellByPosition(intCreditDistColumn, intFinancesRowCount).Value * dblRemainingCredit))
+				REM MSGBOX ("intFinancesRowCount: " + intFinancesRowCount)
+				REM MSGBOX ("(intFinancesRowCount - intFinancesRowStart): " + (intFinancesRowCount - intFinancesRowStart))
+				dblCreditValuesTotal = (dblCreditValuesTotal + aCreditValues((intFinancesRowCount - intFinancesRowStart)))
+				intFinancesRowCount = (intFinancesRowCount + 1)
 			LOOP
-
 		END IF
 
 		IF (dblCreditValuesTotal > (objFinancesAmountCell.Value + dblMaximumVariance)) OR (dblCreditValuesTotal < (objFinancesAmountCell.Value - dblMaximumVariance)) THEN
 			MSGBOX ("ERROR: the credit amount was " + objFinancesAmountCell.Value + ", but the total amount transacted was " + dblCreditValuesTotal)
 			EXIT SUB
 		END IF
+
+		REM DIM intFinancesRowCount		AS INTEGER
+		intFinancesRowCount = intFinancesRowStart
+
+		DO WHILE (intFinancesRowCount < (intFinancesRowStart + intNumberOfCrew))
+			REM DIM dblNewPooledCash			AS DOUBLE
+			DIM dblOldPooledCash			AS DOUBLE
+			REM dblNewPooledCash = 0
+			dblOldPooledCash = 0
+
+			IF NOT (objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+				dblOldPooledCash = objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value
+			END IF
+
+			objFinances.getCellByPosition(intPooledCashColumn, intFinancesRowCount).Value = (dblOldPooledCash + aCreditValues((intFinancesRowCount - intFinancesRowStart)))
+			intFinancesRowCount = (intFinancesRowCount + 1)
+		LOOP
 
 		JOURNAL("Credit", aCreditValues)
 		REM because referring to the same thing in a consistent way is overrated...
@@ -293,7 +321,7 @@ SUB DEBIT
 		DIM dblTotalPooledCash		AS DOUBLE
 		DIM intFinancesRowCount		AS INTEGER
 		DIM intLastPlayerRow		AS INTEGER
-		DIM intNumberOfCrew			AS INTEGER
+		REM DIM intNumberOfCrew			AS INTEGER
 
 		dblDebitAmount = objFinancesAmountCell.Value
 		dblControlTotal = 0
@@ -303,11 +331,11 @@ SUB DEBIT
 			dblTotalPooledCash = objFinances.getCellByPosition(6, 35).Value
 		END IF
 
-		IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
-		ELSE
-			intNumberOfCrew = 0
-		END IF
+		REM IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+		REM 	intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+		REM ELSE
+		REM 	intNumberOfCrew = 0
+		REM END IF
 
 		IF (intNumberOfCrew > 0) THEN
 			REDIM aDebitValues(intNumberOfCrew) AS DOUBLE
@@ -383,7 +411,7 @@ SUB DEBIT
 				dblAddShipStake = 0
 				dblNewShipStake = 0
 
-				objParameters.getCellByPosition(1, 3).Value = (dblCurrentShipMortgage - dblDebitAmount)
+				objParameters.getCellByPosition(1, 3).Value = (dblCurrentShipMortgage - (dblDebitAmount * dblShipPaymentToEquity))
 
 				IF (dblShipPaymentToEquity > 0) THEN
 					IF (booEvenShipStake) THEN
@@ -420,14 +448,14 @@ SUB XFERTOPOOLED
 
 	DIM aValues(1)				AS DOUBLE
 	DIM intFinancesRowCount		AS INTEGER
-	DIM intNumberOfCrew			AS INTEGER
+	REM DIM intNumberOfCrew			AS INTEGER
 
 	intFinancesRowCount = intFinancesRowStart
-	intNumberOfCrew = 0
+	REM intNumberOfCrew = 0
 
-	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
-	END IF
+	REM IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+	REM 		intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	REM END IF
 
 	IF (intNumberOfCrew > 0) THEN
 		REDIM aValues(intNumberOfCrew) AS DOUBLE
@@ -492,14 +520,14 @@ SUB XFERFROMPOOLED
 
 	DIM aValues(1)				AS DOUBLE
 	DIM intFinancesRowCount		AS INTEGER
-	DIM intNumberOfCrew			AS INTEGER
+	REM DIM intNumberOfCrew			AS INTEGER
 
 	intFinancesRowCount = intFinancesRowStart
-	intNumberOfCrew = 0
+	REM intNumberOfCrew = 0
 
-	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
-	END IF
+	REM IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+	REM 		intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	REM END IF
 
 	IF (intNumberOfCrew > 0) THEN
 		REDIM aValues(intNumberOfCrew) AS DOUBLE
@@ -563,14 +591,14 @@ SUB PURCHASE
 
 	DIM aValues(1)				AS DOUBLE
 	DIM intFinancesRowCount		AS INTEGER
-	DIM intNumberOfCrew			AS INTEGER
+	REM DIM intNumberOfCrew			AS INTEGER
 
 	intFinancesRowCount = intFinancesRowStart
-	intNumberOfCrew = 0
+	REM intNumberOfCrew = 0
 
-	IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
-	END IF
+	REM IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+	REM 		intNumberOfCrew = objFinances.getCellByPosition(1, 35).Value
+	REM END IF
 
 	IF (intNumberOfCrew > 0) THEN
 		REDIM aValues(intNumberOfCrew) AS DOUBLE
@@ -615,44 +643,46 @@ END SUB
 SUB CAPPOOLEDCASH
 	INIT()
 
-	DIM intCount				AS INTEGER
-	DIM intPlayerCount			AS INTEGER
-	DIM dblPooledCash			AS DOUBLE
-	DIM dblPooledCashSplit		AS DOUBLE
-
-	IF NOT (objFinances.getCellByPosition(6, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-		dblPooledCash = objFinances.getCellByPosition(6, 35).Value
-	END IF
-
 	IF (dblCapPooledCash > 0) THEN
-		IF NOT (objFinances.getCellByPosition(1, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-			intPlayerCount = objFinances.getCellByPosition(1, 35).Value
+		DIM intCount				AS INTEGER
+		DIM dblTotalPooledCash		AS DOUBLE
+		DIM dblPooledCashDiff		AS DOUBLE
+		DIM dblPooledCashSplit		AS DOUBLE
+
+		IF NOT (objFinances.getCellByPosition(intPooledCashColumn, 35).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+			dblTotalPooledCash = objFinances.getCellByPosition(intPooledCashColumn, 35).Value
 		END IF
-	END IF
-	REM MSGBOX (("intPlayerCount: " + intPlayerCount)
 
-	IF (dblPooledCash > dblCapPooledCash) THEN
-		dblPooledCashDiff = (dblPooledCash - dblCapPooledCash)
-		dblPooledCashSplit = (dblCapPooledCash / intPlayerCount)
-		intCount = intFinancesRowStart
+		IF (dblTotalPooledCash > dblCapPooledCash) THEN
+			dblPooledCashDiff = (dblTotalPooledCash - dblCapPooledCash)
+			dblPooledCashSplit = (dblCapPooledCash / intNumberOfCrew)
+			intCount = intFinancesRowStart
 
-		DO WHILE NOT (objFinances.getCellByPosition(1, intCount).Type = com.sun.star.table.CellContentType.EMPTY) 
-			IF NOT (objFinances.getCellByPosition(6, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
-				IF (objFinances.getCellByPosition(6, intCount).Value > dblPooledCashSplit) THEN
-					DIM dblCashOnHand				AS DOUBLE
+			DO WHILE (intCount < (intFinancesRowStart + intNumberOfCrew)) 
+				IF NOT (objFinances.getCellByPosition(intPooledCashColumn, intCount).Type = com.sun.star.table.CellContentType.EMPTY) THEN
 					DIM dblPooledCashContribution	AS DOUBLE
-					DIM dblPooledCashDifference		AS DOUBLE
+					dblPooledCashContribution = objFinances.getCellByPosition(intPooledCashColumn, intCount).Value
 
-					dblPooledCashContribution = objFinances.getCellByPosition(6, intCount).Value
-					dblCashOnHand = objFinances.getCellByPosition(7, intCount).Value
-					dblPooledCashReduction = (dblPooledCashDiff / intPlayerCount)
-					objFinances.getCellByPosition(6, intCount).Value = (dblPooledCashContribution - dblPooledCashReduction)
-					objFinances.getCellByPosition(7, intCount).Value = (dblCashOnHand + dblPooledCashReduction)
+					IF (dblPooledCashContribution > dblPooledCashSplit) THEN
+						DIM dblCashOnHand				AS DOUBLE
+						DIM dblPooledCashDifference		AS DOUBLE
+
+						dblCashOnHand = objFinances.getCellByPosition(intCashOnHandColumn, intCount).Value
+
+						IF ((dblPooledCashContribution - dblPooledCashSplit) > (dblPooledCashDiff / intNumberOfCrew)) THEN
+							dblPooledCashDifference = (dblPooledCashContribution - dblPooledCashSplit)
+						ELSE
+							dblPooledCashDifference = (dblPooledCashDiff / intNumberOfCrew)
+						END IF
+
+						objFinances.getCellByPosition(intPooledCashColumn, intCount).Value = (dblPooledCashContribution - dblPooledCashDifference)
+						objFinances.getCellByPosition(intCashOnHandColumn, intCount).Value = (dblCashOnHand + dblPooledCashDifference)
+					END IF
 				END IF
-			END IF
 
-			intCount = (intCount + 1)
-		LOOP
+				intCount = (intCount + 1)
+			LOOP
+		END IF
 	END IF
 END SUB
 

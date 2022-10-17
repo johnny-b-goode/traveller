@@ -32,7 +32,7 @@ System Overhauls are complete reimplementations of an entire system. These are d
 | Reading World Codes Reference                                                                                              |
 | Ship Designer - Core Rulebook                                                                                              |
 | Ship Designer - High Guard                                                                                                 |
-| Ship Record                                                                                                                |
+| [Ship Record](https://github.com/johnny-b-goode/traveller/releases/latest/download/ship_record.pdf)                        |
 | [Stock Tracker](https://github.com/johnny-b-goode/traveller/blob/main/doc/instructions-stock_tracker.md)                   |
 | [Trade Tool](https://github.com/johnny-b-goode/traveller/blob/main/doc/instructions-trade_tool.md)                         |
 
