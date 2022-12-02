@@ -2,11 +2,11 @@
 
 ## Summary
 
-A brief explanation of the change(s).
+This overhaul reduces the excess power of psionics. The capacity for psionics is also greatly increased, though the number of trained practitioners remains the same. Some talents are removed, and new ones are added. In addition, a small amount of background lore is provided.
 
 ## Edits
 
-Descriptions of how various rule books would be edited to implement the rule(s) described.
+The following edits are included in this overhaul, listed in order by the book in which the changes appear.
 
 ## Core Rulebook Update 2022
 
@@ -40,8 +40,9 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 	> NOTE: While in metaconcert there is a collective shield applied to the entire group. If metaconcert is used in conjunction with the Shield power,it may be applied to the group in metaconcert, individuals outside the group, or a combination of the group and individual(s) (within reason, referee's discretion).
 
 - **Page 230** - Add after 2nd paragraph, under TELEPATHY, to read as follows:
+
 	**Cloud**
-	*The ability to cause a sophont to become befuddled, confused, or forgetful. There are rumors that at higher levels it can even allow a telepath to render themselves invisible.
+	*The ability to cause a sophont to become befuddled, confused, or forgetful. There are rumors that at higher levels it can even allow a telepath to render themselves invisible.*
 
 	*Check: Average (8+) Telepathy check (1D x 10 seconds, PSI)  
 	Reach: Medium  
@@ -49,13 +50,13 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 
 - **Page 230** - Change 8th - 10th paragraphs, under Telempathy, to read as follows:
 
-	*The communication of emotions and basic feelings is accomplished by telempathy. This ability serves well in the handling of animals and beasts of burden but may also be applied against sophonts. Sending of emotions such as love, hate, fear and others may inﬂuence other beings (although not necessarily in the manner desired). The change in mood may be dramatic and inexplicable, and if the telepath is fortunate, be ascribed to the mercurial nature of emotions.
+	*The communication of emotions and basic feelings is accomplished by telempathy. This ability serves well in the handling of animals and beasts of burden but may also be applied against sophonts. Sending of emotions such as love, hate, fear and others may inﬂuence other beings (although not necessarily in the manner desired). The change in mood may be dramatic and inexplicable, and if the telepath is fortunate, be ascribed to the mercurial nature of emotions.*
 
-	Telempathy also allows the emotions and feelings of others to be read by a Traveller. Sophonts may recognise when someone is using Telempathy to bend their emotions, but other telepaths will always recognise when Telempathy is used against them. If the effect is recognized it can be resisted, and in many cases the emotions can simply be ignored altogether.
+	*Telempathy also allows the emotions and feelings of others to be read by a Traveller. Sophonts may recognise when someone is using Telempathy to bend their emotions, but other telepaths will always recognise when Telempathy is used against them. If the effect is recognized it can be resisted, and in many cases the emotions can simply be ignored altogether.*
 
-	The Effect of the Telepathy check is used to judge the strength of the emotion projected.
+	*The Effect of the Telepathy check is used to judge the strength of the emotion projected.*
 
-	Check: Average (8+) Telepathy check (1D x 10 seconds, PSI)  
+	*Check: Average (8+) Telepathy check (1D x 10 seconds, PSI)  
 	Reach: Medium  
 	PSI Cost: 1*
 
@@ -65,12 +66,12 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 
 - **Page 231** - Change first paragraph, under Suggestion, to read as follows:
 
-	*The telepath implants a thought, idea, or command into the mind of another. It is quite possible for even non-psions to recognize the thought as not their own, so if the suggestion is plainly harmful the subject may not follow the command or act upon the idea. Self-destructive suggestions will rarely, if ever (and never knowingly), be followed.
+	*The telepath implants a thought, idea, or command into the mind of another. It is quite possible for even non-psions to recognize the thought as not their own, so if the suggestion is plainly harmful the subject may not follow the command or act upon the idea. Self-destructive suggestions will rarely, if ever (and never knowingly), be followed.*
 
 - **Page 232** - Add after 9th paragraph, under TELEKINESIS, to read as follows:
 
 	**Audiokinesis**
-	*The ability to manifest sounds. This is not sound as perceived by a specific sophont (such as one's inner monologue), but actual sound perceptible by anyone within range. This effect does require an atmosphere to work, with the thickness of the atmosphere impacting the propagation of sound waves in the normal ways.
+	*The ability to manifest sounds. This is not sound as perceived by a specific sophont (such as one's inner monologue), but actual sound perceptible by anyone within range. This effect does require an atmosphere to work, with the thickness of the atmosphere impacting the propagation of sound waves in the normal ways.*
 
 	| Telekinesis Effect | Audiokinesis Outcome                                                                   |
 	| --------           | -                                                                                      |
@@ -80,12 +81,12 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 	| 4                  | complex sounds (ie, a voice)                                                           |
 	| 6+                 | powerful sounds (ie, sounds that can be felt, such as nearby thunder, or an explosion) |
 
-	Check: Average (8+) Telekinesis check (1D x 10 seconds, PSI)  
+	*Check: Average (8+) Telekinesis check (1D x 10 seconds, PSI)  
 	Reach: Medium  
 	PSI Cost: 2*
 
 	**Optokinesis**
-	*The ability to manifest light. This is not a visualization targetted at a single sophont or group of sophonts, but an actual manifestation of light. This effect is limited to the frequencies of light in and near the visible spectrum for the species using the talent (ie, for a human the visible light spectrum, near infra-red, and near ultra-violet).
+	*The ability to manifest light. This is not a visualization targetted at a single sophont or group of sophonts, but an actual manifestation of light. This effect is limited to the frequencies of light in and near the visible spectrum for the species using the talent (ie, for a human the visible light spectrum, near infra-red, and near ultra-violet).*
 
 	| Telekinesis Effect | Optokinesis Outcome             |
 	| --------           | -                               |
@@ -95,7 +96,7 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 	| 4                  | specific images (ie, illusions) |
 	| 6+                 | laser beam                      |
 
-	Check: Average (8+) Telekinesis check (1D x 10 seconds, PSI)  
+	*Check: Average (8+) Telekinesis check (1D x 10 seconds, PSI)  
 	Reach: Medium  
 	PSI Cost: 2*
 
@@ -104,10 +105,10 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 - **Page 232** - Add after 11th paragraph, under Flight, to read as follows:
 
 	**Fortitude**
-	*By channelling psychic energy to their skeletal structure and boosting their healing rate, the Traveller can enhance their ability to absorb damage. Fortitude lasts a number of rounds equal to the Effect of the Awareness check and provides Protection equal to half the number of PSI points expended. Fortitude stacks with worn armour.
+	*By channelling psychic energy to their skeletal structure and boosting their healing rate, the Traveller can enhance their ability to absorb damage. Fortitude lasts a number of rounds equal to the Effect of the Awareness check and provides Protection equal to half the number of PSI points expended. Fortitude stacks with worn armour.*
 
-	Check: Difficult (10+) Awareness check (1D seconds, PSI)  
-	PSI Cost: Twice the amount of Protection  
+	*Check: Difficult (10+) Awareness check (1D seconds, PSI)  
+	PSI Cost: Twice the amount of Protection*
 
 - **Page 233** - Change third paragraph, under Pyrokinesis, to read as follows:
 
@@ -121,7 +122,7 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 	| 4                  | Is burned, suffering 2D damage and may burst into flames if flammable. | Suffers 2D damage and may be embrittled or frozen (slowing or immobilizing the target). |
 	| 6+                 | Is burned, suffering 2D damage and bursting into flames if flammable.  | Suffers 2D damage and embrittled or frozen (slowing or immobilizing the target).        |
 
-	Check: Routine (8+) Telekinesis check (1D x 10 seconds, PSI)  
+	*Check: Routine (8+) Telekinesis check (1D x 10 seconds, PSI)  
 	Reach: Short  
 	PSI Cost: 3*
 
@@ -131,15 +132,15 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 
 	*PSI points may be converted to STR points on a temporary basis. The Traveller makes the commitment, reduces their available PSI by a specifed number of points and increases their STR characteristic by half the number of PSI points spent. STR reaches its new level immediately, remains at that peak for number of minutes equal to the Effect of the Awareness check x 10 and then declines at the rate of one point per minute until the Traveller’s normal STR is reached.*
 
-	Check: Average (8+) Awareness check (1D seconds, PSI)
-	PSI Cost: STR increase x 2
+	*Check: Average (8+) Awareness check (1D seconds, PSI)  
+	PSI Cost: STR increase x 2*
 
 - **Page 233** - Change first paragraph, under Enhanced Endurance, to read as follows:
 
 	*PSI points may be converted to END points on a temporary basis. The Traveller makes the commitment, reduces their available PSI by a specifed number of points and increases their END characteristic by half the number of PSI points spent. END reaches its new level immediately, remains at that peak for number of minutes equal to the Effect of the Awareness check x 10 and then declines at the rate of one point per minute until the Traveller’s normal END is reached.*
 
-	Check: Average (8+) Awareness check (1D seconds, PSI)
-	PSI Cost: END increase x 2
+	*Check: Average (8+) Awareness check (1D seconds, PSI)  
+	PSI Cost: END increase x 2*
 
 - **Page 232** - Remove Fortitude
 
@@ -147,20 +148,20 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 
 	*Wounds may be healed by the application of this power, exchanging two PSI points to regenerate one lost characteristic point. Should one session of healing be insufcient, further healing and regeneration may be applied after expended PSI is recovered. Regeneration may also be applied to heal old wounds suﬀered prior to psionic training. Regeneration may not be used to counteract ageing, nor may it be used to regain lost SOC.*
 
-	Check: Average (8+) Awareness check (1D minutes, PSI)
-	PSI Cost: Amount healed x 2
+	*Check: Average (8+) Awareness check (1D minutes, PSI)  
+	PSI Cost: Amount healed x 2*
 
 - **Page 234** - Change 3rd through 6th paragraphs, under Teleportation, to read as follows:
 
-	*Teleportation is a talent that allows effectively instantaneous movement from one point to another, without regard for intervening matter. Psionic teleportation is limited to the movement of the teleported Traveller's body and typically up to 10 kg of clothing and equipment.
+	*Teleportation is a talent that allows effectively instantaneous movement from one point to another, without regard for intervening matter. Psionic teleportation is limited to the movement of the teleported Traveller's body and typically up to 10 kg of clothing and equipment.*
 
-	Teleportation requires a considerable amount of PSI energy, more than most sophonts are capable of producing without some form of augmentation. This means teleportation is typically only accomplished using PSI enhancing technologies and / or metaconcert.
+	*Teleportation requires a considerable amount of PSI energy, more than most sophonts are capable of producing without some form of augmentation. This means teleportation is typically only accomplished using PSI enhancing technologies and / or metaconcert.*
 
-	Check: Average (8+) Teleportation check (1D seconds, PSI)
-	Reach: Distant
-	PSI Cost: 30
+	*Check: Average (8+) Teleportation check (1D seconds, PSI)  
+	Reach: Distant  
+	PSI Cost: 30*
 
-	To teleport with armor or up to 500kg of equipment or other sophonts (or up to 500kg of equipment minus the armor), the Teleportation check is increased to Very Difficult (12+) and costs additional PSI points equal to 50% of the base cost.*
+	*To teleport with armor or up to 500kg of equipment or other sophonts (or up to 500kg of equipment minus the armor), the Teleportation check is increased to Very Difficult (12+) and costs additional PSI points equal to 50% of the base cost.*
 
 ## New Rules
 
