@@ -223,13 +223,19 @@ SUB ButtonRoll5A
 	DIM objService				AS OBJECT
 	DIM objSheets				AS OBJECT
 	DIM objTrade				AS OBJECT
+	DIM strWorldPopCode			AS STRING
 
 	objService = createUnoService("com.sun.star.sheet.FunctionAccess")
 	objSheets = ThisComponent.getSheets()
 	objTrade = objSheets.getByName("trade")
 	intFlags = GETFLAGS()
 	intCount = 51
-	intMaxRow = (intCount + CInt(objService.callFunction("MID", Array(objTrade.getCellByPosition(2, 1).String, 5, 1))))
+
+	IF NOT (objTrade.getCellByPosition(2, 1).Type = com.sun.star.table.CellContentType.EMPTY) THEN
+		strWorldPopCode = objService.callFunction("MID", Array(objTrade.getCellByPosition(2, 1).String, 5, 1))
+	END IF
+
+	intMaxRow = (intCount + (objService.callFunction("DECIMAL", Array(strWorldPopCode, 16))))
 
 	DO WHILE (intCount < 63)
 		DIM objCellA			AS OBJECT
@@ -262,7 +268,7 @@ SUB ButtonRoll5B
 END SUB
 
 SUB ButtonRoll6A
-
+	MSGBOX "TradeGoods.Module1.ButtonRoll6A"
 END SUB
 
 SUB ButtonRoll6B
