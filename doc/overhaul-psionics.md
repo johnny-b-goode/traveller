@@ -29,21 +29,21 @@ Descriptions of how various rule books would be edited to implement the rule(s) 
 - **Page 229** - Add after third paragraph, under PSIONIC TALENTS, to read as follows:
 
 	**Metaconcert**
-	*There is at least one basic power that is posessed by all psions, *Metaconcert*. Metaconcert is most easily described as a form of focused meditation in which multiple minds can be joined for the purpose of accomplishing a collective goal. Metaconcert will be focused on a specific individual, the conductor, who will direct the aggregate psionic energy.
+	*There is at least one basic power that is posessed by all psions, *Metaconcert*. Metaconcert is most easily described as a form of focused meditation in which multiple minds can be joined for the purpose of accomplishing a collective goal. Metaconcert will be focused on a specific individual, the conductor, who will direct the aggregate psionic energy.*
 
-	Metaconcert must be actively established by the Travellers before it can be used. It is not a reactive ability that can be instantly engaged and disengaged. Establishing a metaconcert requires a minimum of two participants (one conductor, and at least one contributor), and 1D3 rounds *per participant* (including the conductor). No other action may be taken by the Travellers while establishing the metaconcert, or by contributing Travellers once the metaconcert is established. Additional Travellers may contribute to the metaconcert in 1D3 rounds once it has been established, and so long as there are at least two Travellers participating the metaconcert will continue. If a Traveller receives damage while contributing to a metaconcert, they must succeed on an average (8+) PSI roll to remain in metaconcert. If a Traveller is rendered unconscious, they automatically cease to contribute to the metaconcert.
+	*Metaconcert must be actively established by the Travellers before it can be used. It is not a reactive ability that can be instantly engaged and disengaged. Establishing a metaconcert requires a minimum of two participants (one conductor, and at least one contributor), and 1D3 rounds *per participant* (including the conductor). No other action may be taken by the Travellers while establishing the metaconcert, or by contributing Travellers once the metaconcert is established. Additional Travellers may contribute to the metaconcert in 1D3 rounds once it has been established, and so long as there are at least two Travellers participating the metaconcert will continue. If a Traveller receives damage while contributing to a metaconcert, they must succeed on an average (8+) PSI roll to remain in metaconcert. If a Traveller is rendered unconscious, they automatically cease to contribute to the metaconcert.*
 
-	To contribute to metaconcert, a Traveller rolls an average (8+) PSI check. The contributing Traveller then adds or subtracts the effect of the roll to an amount of PSI points chosen by the contributing Traveller, up to a maximum of half of their PSI score. Metaconcert must be actively maintained, meaning a Traveller may perform no other actions while contributing to metaconcert. 
+	*To contribute to metaconcert, a Traveller rolls an average (8+) PSI check. The contributing Traveller then adds or subtracts the effect of the roll to an amount of PSI points chosen by the contributing Traveller, up to a maximum of half of their PSI score. Metaconcert must be actively maintained, meaning a Traveller may perform no other actions while contributing to metaconcert.*
 
-	The conductor then adds the contributed PSI points to their own PSI score. These contributed PSI points remain available so long as the Traveller(s) maintain metaconcert. There is no upper limit on the amount of psionic strength (number of PSI points) that may be aggregated.
+	*The conductor then adds the contributed PSI points to their own PSI score. These contributed PSI points remain available so long as the Traveller(s) maintain metaconcert. There is no upper limit on the amount of psionic strength (number of PSI points) that may be aggregated.*
 
-	> NOTE: While in metaconcert there is a collective shield applied to the entire group. If metaconcert is used in conjunction with the Shield power,it may be applied to the group in metaconcert, individuals outside the group, or a combination of the group and individual(s) (within reason, referee's discretion).*
+	> NOTE: While in metaconcert there is a collective shield applied to the entire group. If metaconcert is used in conjunction with the Shield power,it may be applied to the group in metaconcert, individuals outside the group, or a combination of the group and individual(s) (within reason, referee's discretion).
 
 - **Page 230** - Add after 2nd paragraph, under TELEPATHY, to read as follows:
 	**Cloud**
 	*The ability to cause a sophont to become befuddled, confused, or forgetful. There are rumors that at higher levels it can even allow a telepath to render themselves invisible.
 
-	Check: Average (8+) Telepathy check (1D x 10 seconds, PSI)  
+	*Check: Average (8+) Telepathy check (1D x 10 seconds, PSI)  
 	Reach: Medium  
 	PSI Cost: 2*  
 
